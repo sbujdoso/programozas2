@@ -11,11 +11,18 @@ struct kocsi //int
 	
 int main()
 {
-		struct kocsi Lada;
-		strcpy(Lada.VN,"HZ");
-		Lada.ar=1011.010;
-		Lada.kerek=4;
-		printf("%s\t%.3f\t%d\n", Lada.VN, Lada.ar, Lada.kerek);
+		struct kocsi Lada[2];
+		int i;
+
+		strcpy(Lada[0].VN,"HZ");
+		Lada[0].ar=1011.010;
+		Lada[0].kerek=4;
+
+		strcpy(Lada[1].VN,"tZ");
+		Lada[1].ar=2011.010;
+		Lada[1].kerek=3;
+
+		for(i=0; i<2; i++) printf("%s\t%.3f\t%d\n", Lada[i].VN, Lada[i].ar, Lada[i].kerek);
 
 		system("PAUSE");
 }
