@@ -2,20 +2,26 @@
 #include <stdlib.h>
 #include <math.h>
 #include <string.h>
+
+struct pont
+{
+		float x;
+		float y;
+};
+
 struct szakasz
 {
-	float A[2];
-	float B[2];
+	struct pont A,B;
 	float hossz;
 };
 	
 int main()
 {
 		struct szakasz rud;
-		scanf("%f,%f", &rud.A[0], &rud.A[1]);
-		scanf("%f,%f", &rud.B[0], &rud.B[1]);
+		scanf("%f,%f", &rud.A.x, &rud.A.y);
+		scanf("%f,%f", &rud.B.x, &rud.B.y);
 
-		rud.hossz = sqrt(pow(rud.A[0] - rud.B[0],2) + pow(rud.A[1] - rud.B[1], 2));
-		printf("Rud koordinatai: %f,%f\t%f,%f, hossza:%f\n", rud.A[0], rud.A[1], rud.B[0], rud.B[1], rud.hossz);
+		rud.hossz = sqrt(pow(rud.A.x - rud.B.x,2) + pow(rud.A.y - rud.B.y, 2));
+		printf("Rud koordinatai: %f,%f\t%f,%f, hossza:%f\n", rud.A.x, rud.A.y, rud.B.x, rud.B.y, rud.hossz);
 		system("PAUSE");
 }
