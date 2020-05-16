@@ -46,6 +46,8 @@ void Print_Kor(struct Kor C)
 int Calc_Kor(struct Kor C, struct Kor D)
 {
 		//0 ha nem metszi, 1 ha metszi
+		//TODO: nincs implementalva ha az egyik kor benne van a 
+		//masikban!!
 		float tav, sumRad;
 		tav = sqrt(pow(C.x - D.x, 2) + pow(C.y - D.y,2));
 		sumRad = C.rad + D.rad;
