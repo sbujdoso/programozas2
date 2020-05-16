@@ -22,7 +22,7 @@ int main()
 		Lada[1].ar=2011.010;
 		Lada[1].kerek=3;
 
-		for(i=0; i<2; i++) printf("%s\t%.3f\t%d\n", Lada[i].VN, Lada[i].ar, Lada[i].kerek);
+		for(i=0; i<2; i++) printf("%s\t%.3f\t%d\t%c\n", Lada[i].VN, Lada[i].ar, Lada[i].kerek, Lada[i].VN[0]);
 
 		system("PAUSE");
 }
