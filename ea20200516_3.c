@@ -33,4 +33,5 @@ int main()
 		printf("i-nek értéke: %d\n", i);
 		for( j=0; j<i; j++) printf("vektor[%d]:%d\n",j, vektor[j]);
 		free(vektor);
+		system("PAUSE");
 }
