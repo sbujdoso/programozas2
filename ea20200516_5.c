@@ -4,20 +4,18 @@
 #include <string.h>
 struct szakasz
 {
-	float Ax;
-	float Ay;
-	float Bx;
-	float By;
+	float A[2];
+	float B[2];
 	float hossz;
 };
 	
 int main()
 {
 		struct szakasz rud;
-		scanf("%f,%f", &rud.Ax, &rud.Ay);
-		scanf("%f,%f", &rud.Bx, &rud.By);
+		scanf("%f,%f", &rud.A[0], &rud.A[1]);
+		scanf("%f,%f", &rud.B[0], &rud.B[1]);
 
-		rud.hossz = sqrt(pow(rud.Ax - rud.Bx,2) + pow(rud.Ay - rud.By, 2));
-		printf("Rud koordinatai: %f,%f\t%f,%f, hossza:%f\n", rud.Ax, rud.Ay, rud.Bx, rud.By, rud.hossz);
+		rud.hossz = sqrt(pow(rud.A[0] - rud.B[0],2) + pow(rud.A[1] - rud.B[1], 2));
+		printf("Rud koordinatai: %f,%f\t%f,%f, hossza:%f\n", rud.A[0], rud.A[1], rud.B[0], rud.B[1], rud.hossz);
 		system("PAUSE");
 }
